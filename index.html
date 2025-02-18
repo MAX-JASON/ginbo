@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>台灣健保破產預測模型報告 (宏觀專業圖表演示版 - 已修正)</title>
+    <style>
+        body { font-family: sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2, h3 { color: #333; }
+        h1 { border-bottom: 2px solid #333; padding-bottom: 0.5em; }
+        h2 { margin-top: 1.5em; }
+        ul { list-style-type: disc; padding-left: 20px; }
+        li { margin-bottom: 0.5em; }
+        .parameter-category { font-weight: bold; margin-top: 1em; }
+        .data-value { font-weight: bold; color: darkblue; }
+        .calculation-result { font-weight: bold; color: red; }
+        .important-consideration { background-color: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 1em; }
+        .important-consideration h3 { margin-top: 0; }
+        .disclaimer { border: 1px solid red; background-color: #ffeeee; padding: 10px; border-radius: 5px; margin-top: 1em; color: red; }
+        .chart-container { width: 95%; margin: 20px auto; }
+        .chart-img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+        .report-section { margin-bottom: 2em; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation@2.2.1/dist/chartjs-plugin-annotation.min.js"></script>
+</head>
+<body>
+
+    <h1>台灣健保破產預測模型報告 (宏觀專業圖表演示版 - 已修正)</h1>
+
+    <div class="disclaimer report-section">
+        <h3>重要聲明：本模型為極度簡化之演示，數據與測算結果僅供參考！</h3>
+        <p>本報告使用簡化模型和假設性數據，圖表結果僅為演示用途，不應作為決策依據。真實分析需使用更完善模型與數據。</p>
+    </div>
+
+    <div class="report-section">
+        <h2>1. 模型目標確立 (同前)</h2>
+        <ul>
+            <li>明確定義「健保破產」的意涵：健保基金<span class="data-value">年度收支出現嚴重赤字，導致基金餘額可能在未來 <span class="calculation-result">約 7-10 年內耗盡 (演示情境)</span></span>。</li>
+            <li>設定預測的時間範圍：<span class="data-value">未來 10 年 (2024-2033) (演示設定)</span>。</li>
+        </ul>
+    </div>
+
+    <div class="report-section">
+        <h2>2. 關鍵參數識別與分類 (同前)</h2>
+        <h3 class="parameter-category">收入面</h3>
+        <ul>
+            <li>保險費收入 (假設成長率: <span class="data-value">2%</span>)</li>
+            <li>政府補助 (假設固定)</li>
+            <li>其他收入 (假設固定)</li>
+        </ul>
+        <h3 class="parameter-category">支出面</h3>
+        <ul>
+            <li>醫療服務支出 (假設成長率: <span class="data-value">4%</span>)</li>
+            <li>行政管理費用 (假設成長率: <span class="data-value">2%</span>)</li>
+            <li>其他支出 (假設固定)</li>
+        </ul>
+        <h3 class="parameter-category">宏觀經濟與人口因素</h3>
+        <ul>
+            <li>人口結構變化</li>
+            <li>總體經濟環境</li>
+        </ul>
+    </div>
+
+    <div class="report-section">
+        <h2>3. 模型方法 (極度簡化線性外推) (同前)</h2>
+        <p>本模型採用極度簡化的線性外推方法...</p>
+    </div>
+
+    <div class="report-section">
+        <h2>4. 預測結果與圖表</h2>
+
+        <div class="chart-container">
+            <canvas id="fundBalanceChart"></canvas>
+            <p style="text-align: center; font-style: italic;">圖表 1：健保基金餘額預估趨勢圖 (含趨勢線)</p>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="revenueExpenditureStackedAreaChart"></canvas>
+            <p style="text-align: center; font-style: italic;">圖表 2：健保基金年度收支結構圖 (堆疊面積圖)</p>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="waterfallChart"></canvas>
+            <p style="text-align: center; font-style: italic;">圖表 3：健保基金年度盈餘/赤字瀑布圖</p>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="revenueStructurePieChart"></canvas>
+            <p style="text-align: center; font-style: italic;">圖表 4：健保基金收入結構圓餅圖 (2033年預估)</p>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="expenditureStructurePieChart"></canvas>
+            <p style="text-align: center; font-style: italic;">圖表 5：健保基金支出結構圓餅圖 (2033年預估)</p>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="populationPyramidChart"></canvas>
+            <p style="text-align: center; font-style: italic;">圖表 6：台灣人口結構金字塔圖 (2024 & 2033年預估)</p>
+        </div>
+
+        <div class="chart-container">
+            <canvas id="dependencyRatioChart"></canvas>
+            <p style="text-align: center; font-style: italic;">圖表 7：台灣社會扶養比趨勢圖</p>
+        </div>
+
+
+        <p><strong>極度簡化預測結果：</strong> 圖表綜合呈現，在假設情境下，健保基金可能在未來約 7-10 年內面臨挑戰，人口結構老化與醫療支出成長是關鍵因素。(此為演示結果，不代表真實情況)</p>
+    </div>
+
+    <div class="report-section">
+        <h2>5. 簡化分析與宏觀視角考量</h2>
+        <p>本模型從宏觀角度納入人口結構與總體經濟因素，更全面地分析健保系統的潛在風險。圖表呈現基金收支結構、人口老化趨勢、扶養比變化等重要面向，有助於從更廣泛的社會經濟背景理解健保議題。</p>
+        <div class="important-consideration">
+            <h3>重要考量 (再次強調)</h3>
+            <ul>
+                <li>數據準確性與模型精細度仍是關鍵，本演示模型僅為概念展示。</li>
+                <li>真實分析應納入更多複雜因素，並進行情境分析與政策模擬。</li>
+                <li>宏觀經濟與人口趨勢分析有助於提升預警能力，但預測仍具不確定性。</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript 程式碼區塊：量化計算與繪製更專業複雜圖表
+
+        // 假設性數據 (擴充更多參數 - 收入、支出、人口、扶養比等)
+        const years = Array.from({ length: 10 }, (_, i) => 2024 + i);
+        const initialBalance = 8000;
+        const revenueGrowthRate = 0.02;
+        const expenseGrowthRate = 0.04;
+        const adminExpenseGrowthRate = 0.02;
+        const initialRevenue = 2000;
+        const initialExpense = 2200;
+
+        let fundBalanceData = [initialBalance];
+        let revenueData = [initialRevenue];
+        let expenditureData = [initialExpense];
+        let yearlySurplusDeficitData = [];
+
+        // **新增：收入結構數據 (假設)**
+        const revenueSources = ['保險費收入', '政府補助', '其他收入'];
+        const initialRevenueStructure = [0.7, 0.25, 0.05]; // 假設初始比例
+        let revenueStructureData = [initialRevenueStructure];
+
+        // **新增：支出結構數據 (假設)**
+        const expenditureCategories = ['門診費用', '住院費用', '藥品費用', '行政費用', '其他支出'];
+        const initialExpenditureStructure = [0.35, 0.3, 0.2, 0.1, 0.05]; // 假設初始比例
+        let expenditureStructureData = [initialExpenditureStructure];
+
+        // **新增：人口結構數據 (假設 - 極度簡化)**
+        const ageGroups = ['0-14歲', '15-64歲', '65歲以上'];
+        const populationStructure2024 = [0.12, 0.7, 0.18]; // 假設 2024 年人口結構
+        const populationStructureGrowth = [-0.01, 0.002, 0.008]; // 假設各年齡層人口比例變化
+        let populationStructureData = [populationStructure2024];
+
+        // **新增：扶養比數據 (假設)**
+        let dependencyRatioData = [0.45]; // 假設 2024 年扶養比，並假設逐年上升
+        const dependencyRatioGrowthRate = 0.01; // 假設扶養比每年增加 1%
+
+
+        for (let i = 1; i < years.length; i++) {
+            let lastBalance = fundBalanceData[fundBalanceData.length - 1];
+            let lastRevenue = revenueData[revenueData.length - 1];
+            let lastExpenditure = expenditureData[expenditureData.length - 1];
+
+            let currentRevenue = lastRevenue * (1 + revenueGrowthRate);
+            let currentExpenditure = lastExpenditure * (1 + expenseGrowthRate);
+            let currentBalance = lastBalance + currentRevenue - currentExpenditure;
+            let yearlySurplusDeficit = currentRevenue - currentExpenditure;
+
+            revenueData.push(currentRevenue);
+            expenditureData.push(currentExpenditure);
+            fundBalanceData.push(currentBalance);
+            yearlySurplusDeficitData.push(yearlySurplusDeficit);
+
+            // **更新：收入結構 (假設比例固定)**
+            revenueStructureData.push(initialRevenueStructure);
+
+            // **更新：支出結構 (假設比例固定)**
+            expenditureStructureData.push(initialExpenditureStructure);
+
+            // **更新：人口結構 (簡化線性變化)**
+            let lastPopulationStructure = populationStructureData[populationStructureData.length - 1];
+            let currentPopulationStructure = lastPopulationStructure.map((ratio, index) => Math.max(0, ratio + populationStructureGrowth[index])); // 比例線性變化，且不低於 0
+            const structureSum = currentPopulationStructure.reduce((sum, ratio) => sum + ratio, 0); // 總和
+            currentPopulationStructure = currentPopulationStructure.map(ratio => ratio / structureSum); // 比例標準化，總和為 1
+            populationStructureData.push(currentPopulationStructure);
+
+
+            // **更新：扶養比 (假設線性成長)**
+            let lastDependencyRatio = dependencyRatioData[dependencyRatioData.length - 1];
+            let currentDependencyRatio = lastDependencyRatio * (1 + dependencyRatioGrowthRate);
+            dependencyRatioData.push(currentDependencyRatio);
+
+        }
+
+        // 圖表 1: 健保基金餘額趨勢圖 (同前 - ID: fundBalanceChart)
+        const fundBalanceCtx = document.getElementById('fundBalanceChart').getContext('2d');
+        const fundBalanceChart = new Chart(fundBalanceCtx, {
+            type: 'line',
+            data: {
+                labels: years,
+                datasets: [{
+                    label: '健保基金餘額 (億元)',
+                    data: fundBalanceData,
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { display: true, title: { display: true, text: '年份' } },
+                    y: { display: true, title: { display: true, text: '基金餘額 (億元)' } }
+                },
+                plugins: {
+                    legend: { display: true },
+                    annotation: { // 添加趨勢線
+                        annotations: [{
+                            type: 'line',
+                            mode: 'vertical',
+                            scaleID: 'y',
+                            value: 0,
+                            borderColor: 'rgba(255, 99, 132, 0.7)',
+                            borderWidth: 1,
+                            label: {
+                                enabled: true,
+                                content: '基金耗盡臨界點 (預估)',
+                                position: 'top'
+                            }
+                        }]
+                    }
+                }
+            }
+        });
+
+
+        // 圖表 2: 健保基金年度收支結構圖 (堆疊面積圖 - ID: revenueExpenditureStackedAreaChart)
+        const revenueExpenditureStackedAreaCtx = document.getElementById('revenueExpenditureStackedAreaChart').getContext('2d');
+        const revenueExpenditureStackedAreaChart = new Chart(revenueExpenditureStackedAreaCtx, {
+            type: 'line', // 使用 line chart 模擬堆疊面積圖
+            data: {
+                labels: years,
+                datasets: [
+                    {
+                        label: '總收入 (億元)',
+                        data: revenueData,
+                        backgroundColor: 'rgba(75, 192, 192, 0.6)', // 面積顏色
+                        borderColor: 'rgba(75, 192, 192, 1)', // 線條顏色
+                        borderWidth: 1,
+                        fill: 'origin', // 填充到原點 (x軸)
+                        tension: 0.4
+                    },
+                    {
+                        label: '總支出 (億元)',
+                        data: expenditureData,
+                        backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1,
+                        fill: '-1', // 填充到上一個 dataset (-1 指向前一個 dataset)
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { stacked: true, display: true, title: { display: true, text: '年份' } },
+                    y: { stacked: true, display: true, title: { display: true, text: '金額 (億元)' } }
+                },
+                plugins: { legend: { display: true } }
+            }
+        });
+
+
+        // 圖表 3: 健保基金年度盈餘/赤字瀑布圖 (ID: waterfallChart)
+        const waterfallCtx = document.getElementById('waterfallChart').getContext('2d');
+        const waterfallChart = new Chart(waterfallCtx, {
+            type: 'bar', // 瀑布圖本質上也是柱狀圖的一種變形
+            data: {
+                labels: years.slice(1), // 瀑布圖從第二年開始顯示盈餘/赤字變化
+                datasets: [{
+                    label: '年度盈餘/赤字 (億元)',
+                    data: yearlySurplusDeficitData,
+                    backgroundColor: (context) => { // 根據數值正負設定顏色
+                        const value = context.dataset.data[context.dataIndex];
+                        return value >= 0 ? 'rgba(75, 192, 192, 0.8)' : 'rgba(255, 99, 132, 0.8)';
+                    },
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { display: true, title: { display: true, text: '年份 (年度變化)' } },
+                    y: { display: true, title: { display: true, text: '盈餘/赤字 (億元)' } }
+                },
+                plugins: { legend: { display: true } }
+            }
+        });
+
+
+        // 圖表 4: 健保基金收入結構圓餅圖 (ID: revenueStructurePieChart)
+        const revenueStructureCtx = document.getElementById('revenueStructurePieChart').getContext('2d');
+        const revenueStructurePieChart = new Chart(revenueStructureCtx, {
+            type: 'pie',
+            data: {
+                labels: revenueSources,
+                datasets: [{
+                    label: '收入結構',
+                    data: revenueStructureData[revenueStructureData.length-1].map(ratio => ratio * revenueData[revenueData.length-1]), // 使用 2033 年預估收入總額 * 比例
+                    backgroundColor: ['rgba(75, 192, 192, 0.8)', 'rgba(54, 162, 235, 0.8)', 'rgba(255, 206, 86, 0.8)'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { position: 'bottom' }, title: { display: true, text: '2033年健保基金收入結構預估' } }
+            }
+        });
+
+        // 圖表 5: 健保基金支出結構圓餅圖 (ID: expenditureStructurePieChart)
+        const expenditureStructureCtx = document.getElementById('expenditureStructurePieChart').getContext('2d');
+        const expenditureStructurePieChart = new Chart(expenditureStructureCtx, {
+            type: 'pie',
+            data: {
+                labels: expenditureCategories,
+                datasets: [{
+                    label: '支出結構',
+                    data: expenditureStructureData[expenditureStructureData.length-1].map(ratio => ratio * expenditureData[expenditureData.length-1]), // 使用 2033 年預估支出總額 * 比例
+                    backgroundColor: ['rgba(255, 99, 132, 0.8)', 'rgba(255, 159, 64, 0.8)', 'rgba(255, 205, 86, 0.8)', 'rgba(75, 192, 192, 0.8)', 'rgba(54, 162, 235, 0.8)'],
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: { legend: { position: 'bottom' }, title: { display: true, text: '2033年健保基金支出結構預估' } }
+            }
+        });
+
+
+        // 圖表 6: 台灣人口結構金字塔圖 (簡化 - 長條圖模擬 - ID: populationPyramidChart)
+        const populationPyramidCtx = document.getElementById('populationPyramidChart').getContext('2d');
+        const populationPyramidChart = new Chart(populationPyramidCtx, {
+            type: 'bar', // 使用 bar chart 模擬人口金字塔
+            data: {
+                labels: ageGroups,
+                datasets: [{
+                    label: '2024年人口比例',
+                    data: populationStructureData[0], // 2024 年人口結構比例
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                },
+                {
+                    label: '2033年人口比例',
+                    data: populationStructureData[populationStructureData.length-1], // 2033 年預估人口結構比例
+                    backgroundColor: 'rgba(255, 159, 64, 0.7)',
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { stacked: false, display: true, title: { display: true, text: '年齡層' } },
+                    y: { stacked: false, display: true, title: { display: true, text: '人口比例' }, ticks: {format: {style: 'percent'}} } // Y軸改為百分比顯示
+                },
+                plugins: { legend: { position: 'bottom' }, title: { display: true, text: '台灣人口結構變化 (比例)' } }
+            }
+        });
+
+        // 圖表 7: 台灣社會扶養比趨勢圖 (ID: dependencyRatioChart)
+        const dependencyRatioCtx = document.getElementById('dependencyRatioChart').getContext('2d');
+        const dependencyRatioChart = new Chart(dependencyRatioCtx, {
+            type: 'line',
+            data: {
+                labels: years,
+                datasets: [{
+                    label: '扶養比',
+                    data: dependencyRatioData,
+                    borderColor: 'rgba(153, 102, 255, 1)',
+                    borderWidth: 2,
+                    fill: false,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    x: { display: true, title: { display: true, text: '年份' } },
+                    y: { display: true, title: { display: true, text: '扶養比 (非勞動力人口 / 勞動力人口)' } }
+                },
+                plugins: { legend: { position: 'bottom' } , title: { display: true, text: '台灣社會扶養比趨勢預估' }}
+            }
+        });
+
+
+    </script>
+
+</body>
+</html>
